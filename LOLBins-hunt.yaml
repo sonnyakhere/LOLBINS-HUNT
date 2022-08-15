@@ -13,6 +13,7 @@ relevantTechniques:
   - T1218
   
 query: |
+  //This query uses sysmon data depending on table name used this may need updataing
   let Bin = externaldata(Binary: string,values: dynamic) [@"https://github.com/sonnyakhere/LOLBAS_to_CSV/blob/main/lolbas.csv"]
   with (format="txt")
   | where Binary has "blob-code blob-code-inner js-file-line"
